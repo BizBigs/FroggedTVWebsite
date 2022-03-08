@@ -15,7 +15,7 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./database/database-data:/var/lib/postgresql/data
+      - ./db/database-data:/var/lib/postgresql/data
 
   visualizer:
     container_name: pgAdmin
@@ -28,9 +28,9 @@ services:
     ports:
       - '8080:80'
     volumes:
-      - ./database/pgadmin-data:/var/lib/pgadmin
+      - ./db/pgadmin-data:/var/lib/pgadmin
     links:
-      - 'database:pgsql-server'
+      - 'db:pgsql-server'
 
   api:
     build: ./backend/api
