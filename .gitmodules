@@ -2,3 +2,6 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/BizBigs/FroggedTVWebsite_backend.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/BizBigs/FroggedTVWebsite_frontend.git
