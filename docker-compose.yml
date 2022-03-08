@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     environment:
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=ftvwebsite
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=secret
       - PGDATA:/var/lib/postgresql/data
