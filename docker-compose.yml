@@ -51,6 +51,18 @@ services:
     container_name: ftv_front
     restart: always
     volumes:
+      - './frontend:/app'
+      - '/app/node_modules'
+    ports:
+      -  "8999:8080"
+
+  ui-prod:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-prod
+    container_name: ftv_front-prod
+    restart: always
+    volumes:
       - type: bind
         source: ./frontend/
         target: /app
